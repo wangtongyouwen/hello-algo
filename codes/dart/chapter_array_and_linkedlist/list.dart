@@ -4,6 +4,8 @@
  * Author: Jefferson (JeffersonHuang77@gmail.com)
  */
 
+// ignore_for_file: unused_local_variable
+
 /* Driver Code */
 void main() {
   /* 初始化列表 */
@@ -11,8 +13,8 @@ void main() {
   print('列表 nums = $nums');
 
   /* 访问元素 */
-  int num = nums[1];
-  print('访问索引 1 处的元素，得到 num = $num');
+  int _num = nums[1];
+  print('访问索引 1 处的元素，得到 _num = $_num');
 
   /* 更新元素 */
   nums[1] = 0;
@@ -22,7 +24,7 @@ void main() {
   nums.clear();
   print('清空列表后 nums = $nums');
 
-  /* 尾部添加元素 */
+  /* 在尾部添加元素 */
   nums.add(1);
   nums.add(3);
   nums.add(2);
@@ -30,7 +32,7 @@ void main() {
   nums.add(4);
   print('添加元素后 nums = $nums');
 
-  /* 中间插入元素 */
+  /* 在中间插入元素 */
   nums.insert(3, 6);
   print('在索引 3 处插入数字 6 ，得到 nums = $nums');
 
@@ -41,12 +43,12 @@ void main() {
   /* 通过索引遍历列表 */
   int count = 0;
   for (var i = 0; i < nums.length; i++) {
-    count++;
+    count += nums[i];
   }
   /* 直接遍历列表元素 */
   count = 0;
-  for (var n in nums) {
-    count++;
+  for (var x in nums) {
+    count += x;
   }
 
   /* 拼接两个列表 */

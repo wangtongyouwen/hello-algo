@@ -1,7 +1,7 @@
 """
 File: top_k.py
 Created Time: 2023-06-10
-Author: Krahets (krahets@163.com)
+Author: krahets (krahets@163.com)
 """
 
 import sys
@@ -15,6 +15,7 @@ import heapq
 
 def top_k_heap(nums: list[int], k: int) -> list[int]:
     """基于堆查找数组中最大的 k 个元素"""
+    # 初始化小顶堆
     heap = []
     # 将数组的前 k 个元素入堆
     for i in range(k):

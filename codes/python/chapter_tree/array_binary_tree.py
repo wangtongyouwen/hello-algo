@@ -1,7 +1,7 @@
 """
 File: array_binary_tree.py
 Created Time: 2023-07-19
-Author: Krahets (krahets@163.com)
+Author: krahets (krahets@163.com)
 """
 
 import sys
@@ -19,10 +19,10 @@ class ArrayBinaryTree:
         self._tree = list(arr)
 
     def size(self):
-        """节点数量"""
+        """列表容量"""
         return len(self._tree)
 
-    def val(self, i: int) -> int:
+    def val(self, i: int) -> int | None:
         """获取索引为 i 节点的值"""
         # 若索引越界，则返回 None ，代表空位
         if i < 0 or i >= self.size():
@@ -92,9 +92,9 @@ if __name__ == "__main__":
     arr = [1, 2, 3, 4, None, 6, 7, 8, 9, None, None, 12, None, None, 15]
     root = list_to_tree(arr)
     print("\n初始化二叉树\n")
-    print(f"二叉树的数组表示：")
+    print("二叉树的数组表示：")
     print(arr)
-    print(f"二叉树的链表表示：")
+    print("二叉树的链表表示：")
     print_tree(root)
 
     # 数组表示下的二叉树类

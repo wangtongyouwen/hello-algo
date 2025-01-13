@@ -101,7 +101,7 @@ class AVLTree:
         """递归插入节点（辅助方法）"""
         if node is None:
             return TreeNode(val)
-        # 1. 查找插入位置，并插入节点
+        # 1. 查找插入位置并插入节点
         if val < node.val:
             node.left = self.insert_helper(node.left, val)
         elif val > node.val:
@@ -122,7 +122,7 @@ class AVLTree:
         """递归删除节点（辅助方法）"""
         if node is None:
             return None
-        # 1. 查找节点，并删除之
+        # 1. 查找节点并删除
         if val < node.val:
             node.left = self.remove_helper(node.left, val)
         elif val > node.val:
@@ -184,16 +184,8 @@ if __name__ == "__main__":
 
     # 插入节点
     # 请关注插入节点后，AVL 树是如何保持平衡的
-    test_insert(avl_tree, 1)
-    test_insert(avl_tree, 2)
-    test_insert(avl_tree, 3)
-    test_insert(avl_tree, 4)
-    test_insert(avl_tree, 5)
-    test_insert(avl_tree, 8)
-    test_insert(avl_tree, 7)
-    test_insert(avl_tree, 9)
-    test_insert(avl_tree, 10)
-    test_insert(avl_tree, 6)
+    for val in [1, 2, 3, 4, 5, 8, 7, 9, 10, 6]:
+        test_insert(avl_tree, val)
 
     # 插入重复节点
     test_insert(avl_tree, 7)
